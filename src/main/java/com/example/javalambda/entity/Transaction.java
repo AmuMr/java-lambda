@@ -2,9 +2,9 @@ package com.example.javalambda.entity;
 
 public class Transaction {
 
-    private final Trader trader;
-    private final  int year;
-    private final int value;
+    private  Trader trader;
+    private   int year;
+    private  int value;
 
     public Transaction(Trader trader, int year, int value) {
         this.trader = trader;
@@ -23,6 +23,18 @@ public class Transaction {
 
     public int getValue() {
         return value;
+    }
+
+    public void setTrader(Trader trader) {
+        this.trader = trader;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     @Override

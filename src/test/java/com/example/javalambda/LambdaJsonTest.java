@@ -39,7 +39,7 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.reducing;
 
 
-public class LambdaTest {
+public class LambdaJsonTest {
 
 
     private static void souts() {
@@ -566,40 +566,40 @@ public class LambdaTest {
 
 
         List<Transaction> collect = transactions.stream().filter(s -> s.getYear() == 2011).sorted(comparing(Transaction::getValue)).collect(Collectors.toList());
-        //System.out.println(collect);
-
+        System.out.println(collect);
+//
         List<String> collect1 = transactions.stream().map(s -> s.getTrader().getCity()).distinct().collect(Collectors.toList());
-        //collect1.forEach(s1 -> System.out.println(s1));
-
+        collect1.forEach(s1 -> System.out.println(s1));
+//
         List<Transaction> collect2 = transactions.stream().filter(s -> s.getTrader().getCity().equals("Cambridge")).sorted(comparing(s -> s.getTrader().getName())).collect(Collectors.toList());
-        //collect2.forEach(s-> System.out.println(s));
-
+        collect2.forEach(s-> System.out.println(s));
+//
         String collect3 = transactions.stream().map(s -> s.getTrader().getName()).sorted().distinct().collect(joining());
-        //collect3.forEach(s-> System.out.println(s));
         System.out.println(collect3);
-
+//
         boolean anyMatch = transactions.stream().anyMatch(s -> s.getTrader().getCity().equals("Milan"));
-        //System.out.println(anyMatch);
-
+        System.out.println(anyMatch);
+//
         Optional<Integer> count = transactions.stream().filter(s -> s.getTrader().getCity().equals("Cambridge")).map(Transaction::getValue).reduce(Integer::sum);
-        //System.out.println(count.get());
-
+        System.out.println(count.get());
+//
         Optional<Integer> reduce = transactions.stream().map(Transaction::getValue).reduce(Integer::max);
-        //System.out.println(reduce.get());
-
+        System.out.println(reduce.get());
+//
         Optional<Integer> max = transactions.stream().map(Transaction::getValue).max(Integer::compareTo);
-        //System.out.println(max.get());
-
+        System.out.println(max.get());
+//
         Optional<Integer> max1 = transactions.stream().map(Transaction::getValue).max(Comparator.comparing(Integer::intValue));
-        //System.out.println(max1.get());
-
+        System.out.println(max1.get());
+//
         Optional<Integer> max2 = transactions.stream().map(Transaction::getValue).min(Comparator.comparing(Integer::intValue));
-        //System.out.println(max2.get());
-
+        System.out.println(max2.get());
+//
         Optional<Transaction> min = transactions.stream().min(comparing(Transaction::getValue));
-        //System.out.println(min.get().getValue());
+        System.out.println(min.get().getValue());
 
-        Optional<Transaction> reduce1 = transactions.stream().reduce((a1, a2) -> a1.getValue() < a2.getValue() ? a1 : a2);
+        Optional<Transaction> reduce1 = transactions.stream().reduce((a1, a2) -> a1);
+
         System.out.println(reduce1.get().getValue());
 
     }
@@ -689,5 +689,44 @@ public class LambdaTest {
         List<String> list2 = new ArrayList<String>();
         System.out.println(list2.contains("1"));
     }
+
+    @Test
+    public void test40() {
+        List<Data1> list1 = new ArrayList<Data1>() {{
+            add(new Data1 (1,"tom", 10));
+            add(new Data1 (2,"jay", 20));
+            add(new Data1 (3,"sky", 30));
+            add(new Data1 (4,"amu", 40));
+
+        }};
+
+        List<Data1> list2 = new ArrayList<Data1>() {{
+            add(new Data1 (1,"tom", 10));
+            add(new Data1 (2,"jay", 20));
+        }};
+
+        list1.addAll(list2);
+
+    }
+
+    @Test
+    public void test41() {
+        List<Integer> list1 = new ArrayList<>() ;
+        for (int i = 0; i < 100000; i++) {
+             list1.add(i);
+        }
+        list1.parallelStream().forEach(s->{
+            System.out.println(Thread.currentThread().getName()+">>>>"+s);
+        });
+    }
+
+
+
+
+    public static void main(String args[]) {
+        System.out.println(Boolean.parseBoolean("true"));
+
+    }
+
 
 }

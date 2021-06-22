@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
  * @Date: 2018/8/9 10:23
  * @Description:
  */
-public class Java8MergeListTest {
+public class Java8MergeListJsonTest {
 
     @Test
     public void mergeMapValuesTest() {
