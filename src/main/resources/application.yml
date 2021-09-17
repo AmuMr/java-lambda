@@ -3,5 +3,11 @@ user:
     name: tom
     sex: man
     age: 16
-https:
-   url: https://127.0.0.1
+server:
+  port: 8080
+  servlet:
+    context-path: /lambda
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379

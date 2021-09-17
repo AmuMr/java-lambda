@@ -3,9 +3,11 @@ package com.example.javalambda.json;
 import lombok.Data;
 
 @Data
-public class Request<T>{
+public class Response<T> {
 
-    private String applicationNo;
+    private int code;
+
+    private String message;
 
     private T data;
 

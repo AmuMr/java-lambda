@@ -9,6 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class JavaLambdaApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(JavaLambdaApplication.class, args);
     }
 

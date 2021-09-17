@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "user.info")
 public class User {
 
-        private String name;
-        private String sex;
-        private int age;
+    private String name;
+    private String sex;
+    private int age;
 
     public String getName() {
         return name;

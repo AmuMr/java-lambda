@@ -3,14 +3,16 @@ package com.example.javalambda.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 public class HelloWordController {
 
 
     @RequestMapping("/hi")
-    public String sayHello(){
+    public LocalDateTime sayHello() {
 
-        return "hello word";
+        return LocalDateTime.now();
     }
 
 

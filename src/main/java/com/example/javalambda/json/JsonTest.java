@@ -52,12 +52,12 @@ public class JsonTest<T> {
         byte[] encode = Base64.getEncoder().encode(value.getBytes(StandardCharsets.UTF_8));
         objectNode.put("data", new String(encode, StandardCharsets.UTF_8));
         String asString = mapper.writeValueAsString(objectNode);
-       // System.out.println(asString);
+        // System.out.println(asString);
 
 
         Request<TradeRequest> response = trade(asString, TradeRequest.class);
-        // openAccount();
-        System.out.println(response.getData());
+//         openAccount();
+        System.out.println(response.getData().getAccountNo());
 
     }
 
@@ -71,7 +71,7 @@ public class JsonTest<T> {
         byte[] decode = Base64.getDecoder().decode(data.getBytes(StandardCharsets.UTF_8));
         ObjectNode nodes = jsonNode.deepCopy();
         String decodeStr = new String(decode, StandardCharsets.UTF_8);
-        nodes.putPOJO("data", "");
+        nodes.putPOJO("data", mapper.readTree(decodeStr));
 
         String asString1 = mapper.writeValueAsString(nodes);
 
@@ -81,17 +81,17 @@ public class JsonTest<T> {
     }
 
 
-//    private static <T> T  extracted(String asString, TypeReference<T> tClass) throws JsonProcessingException {
-//        JsonNode jsonNode = mapper.readTree(asString);
-//        String data = jsonNode.get("data").textValue();
-//        byte[] decode = Base64.getDecoder().decode(data.getBytes(StandardCharsets.UTF_8));
-//        ObjectNode nodes = jsonNode.deepCopy();
-//        String decodeStr = new String(decode, StandardCharsets.UTF_8);
-//        nodes.putPOJO("data", mapper.readValue(decodeStr, tClass));
-//
-//        String  string = mapper.writeValueAsString(nodes);
-//       return   mapper.readValue(string, tClass);
-//    }
+    private static <T> T extracted(String asString, TypeReference<T> tClass) throws JsonProcessingException {
+        JsonNode jsonNode = mapper.readTree(asString);
+        String data = jsonNode.get("data").textValue();
+        byte[] decode = Base64.getDecoder().decode(data.getBytes(StandardCharsets.UTF_8));
+        ObjectNode nodes = jsonNode.deepCopy();
+        String decodeStr = new String(decode, StandardCharsets.UTF_8);
+        nodes.putPOJO("data", mapper.readValue(decodeStr, tClass));
+
+        String string = mapper.writeValueAsString(nodes);
+        return mapper.readValue(string, tClass);
+    }
 
 
     private static void openAccount() throws JsonProcessingException {

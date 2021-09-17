@@ -8,11 +8,13 @@ import com.example.javalambda.entity.Transaction;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.StopWatch;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalTime;
@@ -281,7 +283,7 @@ public class LambdaJsonTest {
 
         }};
 
-        Map<String, Double> map = new HashMap();
+        Map<String, Double> map = new HashMap<>();
         // list.forEach(s -> map.computeIfAbsent(s.getName(), key ->  1+1.0));
         list.forEach(s -> {
             map.computeIfPresent(s.getName(), (key, value) -> {
@@ -711,20 +713,33 @@ public class LambdaJsonTest {
 
     @Test
     public void test41() {
-        List<Integer> list1 = new ArrayList<>() ;
+        List<Integer> list1 = new ArrayList<>();
         for (int i = 0; i < 100000; i++) {
-             list1.add(i);
+            list1.add(i);
         }
-        list1.parallelStream().forEach(s->{
-            System.out.println(Thread.currentThread().getName()+">>>>"+s);
+        list1.parallelStream().forEach(s -> {
+            System.out.println(Thread.currentThread().getName() + ">>>>" + s);
         });
     }
 
 
+    @Test
+    public void test42() throws UnsupportedEncodingException {
+        Object invoke = new Object();
+        String xml = (String) invoke;
+        new String(xml.getBytes("GBK"), "UTF-8");
+    }
 
 
-    public static void main(String args[]) {
-        System.out.println(Boolean.parseBoolean("true"));
+    @Before
+    public void init() {
+        System.out.println("预加载");
+    }
+
+    @Test
+    public void test43() throws UnsupportedEncodingException {
+
+        Object invoke = new Object();
 
     }
 
