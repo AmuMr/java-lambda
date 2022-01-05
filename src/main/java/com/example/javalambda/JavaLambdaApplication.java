@@ -13,4 +13,5 @@ public class JavaLambdaApplication {
         SpringApplication.run(JavaLambdaApplication.class, args);
     }
 
+
 }

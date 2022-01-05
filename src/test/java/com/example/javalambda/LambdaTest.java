@@ -1,14 +1,18 @@
 package com.example.javalambda;
 
+import com.example.javalambda.config.ThreadLocalTest;
+import com.example.javalambda.converter.ConverterHandel;
+import com.example.javalambda.entity.BaseDto;
 import com.example.javalambda.entity.Data1;
 import com.example.javalambda.entity.Fund;
+import com.example.javalambda.entity.Menu;
 import com.example.javalambda.entity.Person;
 import com.example.javalambda.entity.Trader;
 import com.example.javalambda.entity.Transaction;
+import com.example.javalambda.entity.User;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.StopWatch;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
@@ -22,9 +26,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.StringJoiner;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -36,13 +42,18 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.maxBy;
+import static java.util.stream.Collectors.partitioningBy;
 import static java.util.stream.Collectors.reducing;
 
 
-public class LambdaJsonTest {
+public class LambdaTest {
 
+
+    private boolean flag;
 
     private static void souts() {
         new Thread(() -> {
@@ -55,6 +66,16 @@ public class LambdaJsonTest {
                 System.out.println(i);
             }
         }).start();
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list1 = new ArrayList<>();
+        for (int i = 0; i < 100000; i++) {
+            list1.add(i);
+        }
+        list1.stream().forEach(s -> {
+            System.out.println(Thread.currentThread().getName() + ">>>>" + s);
+        });
     }
 
     @Test
@@ -412,7 +433,6 @@ public class LambdaJsonTest {
         System.out.println(now);
     }
 
-
     @Test
     public void test26() {
         String reduce = Stream.of("A", "B", "C", "D").collect(joining("<1D>"));
@@ -438,7 +458,6 @@ public class LambdaJsonTest {
     private void deal(String s) {
         System.out.println(s);
     }
-
 
     @Test
     public void test28() {
@@ -549,7 +568,6 @@ public class LambdaJsonTest {
 
     }
 
-
     @Test
     public void test35() {
         Trader raoul = new Trader("Raoul", "Cambridge");
@@ -574,7 +592,7 @@ public class LambdaJsonTest {
         collect1.forEach(s1 -> System.out.println(s1));
 //
         List<Transaction> collect2 = transactions.stream().filter(s -> s.getTrader().getCity().equals("Cambridge")).sorted(comparing(s -> s.getTrader().getName())).collect(Collectors.toList());
-        collect2.forEach(s-> System.out.println(s));
+        collect2.forEach(s -> System.out.println(s));
 //
         String collect3 = transactions.stream().map(s -> s.getTrader().getName()).sorted().distinct().collect(joining());
         System.out.println(collect3);
@@ -640,7 +658,6 @@ public class LambdaJsonTest {
         };
     }
 
-
     @Test
     public void test38() {
 
@@ -672,10 +689,10 @@ public class LambdaJsonTest {
     public void test39() {
 
         List<Data1> list1 = new ArrayList<Data1>() {{
-            add(new Data1 (1,"tom", 10));
-            add(new Data1 (2,"jay", 20));
-            add(new Data1 (3,"sky", 30));
-            add(new Data1 (4,"amu", 40));
+            add(new Data1(1, "tom", 10));
+            add(new Data1(2, "jay", 20));
+            add(new Data1(3, "sky", 30));
+            add(new Data1(4, "amu", 40));
 
         }};
 
@@ -685,7 +702,7 @@ public class LambdaJsonTest {
         Integer integer = list1.stream().map(Data1::getAmount).collect(reducing(0, (a, b) -> a + b));
         System.out.println(integer);
 
-        Integer integer1 = list1.stream().collect(reducing(1,Data1::getAmount, (a, b) -> a *b));
+        Integer integer1 = list1.stream().collect(reducing(1, Data1::getAmount, (a, b) -> a * b));
         System.out.println(integer1);
 
         List<String> list2 = new ArrayList<String>();
@@ -695,16 +712,16 @@ public class LambdaJsonTest {
     @Test
     public void test40() {
         List<Data1> list1 = new ArrayList<Data1>() {{
-            add(new Data1 (1,"tom", 10));
-            add(new Data1 (2,"jay", 20));
-            add(new Data1 (3,"sky", 30));
-            add(new Data1 (4,"amu", 40));
+            add(new Data1(1, "tom", 10));
+            add(new Data1(2, "jay", 20));
+            add(new Data1(3, "sky", 30));
+            add(new Data1(4, "amu", 40));
 
         }};
 
         List<Data1> list2 = new ArrayList<Data1>() {{
-            add(new Data1 (1,"tom", 10));
-            add(new Data1 (2,"jay", 20));
+            add(new Data1(1, "tom", 10));
+            add(new Data1(2, "jay", 20));
         }};
 
         list1.addAll(list2);
@@ -717,11 +734,10 @@ public class LambdaJsonTest {
         for (int i = 0; i < 100000; i++) {
             list1.add(i);
         }
-        list1.parallelStream().forEach(s -> {
+        list1.stream().forEach(s -> {
             System.out.println(Thread.currentThread().getName() + ">>>>" + s);
         });
     }
-
 
     @Test
     public void test42() throws UnsupportedEncodingException {
@@ -730,17 +746,112 @@ public class LambdaJsonTest {
         new String(xml.getBytes("GBK"), "UTF-8");
     }
 
+    @Test
+    public void test43() {
+        List<Data1> list1 = new ArrayList<Data1>() {{
+            add(new Data1(1, "tom", 10));
+            add(new Data1(2, "jay", 20));
+            add(new Data1(3, "sky", 30));
+            add(new Data1(4, "amu", 40));
 
-    @Before
-    public void init() {
-        System.out.println("预加载");
+        }};
+
+        Comparator<Data1> comparator = Comparator.comparingInt(Data1::getId);
+
+        Optional<Data1> result = list1.stream().collect(maxBy(comparator));
+        System.out.println(result);
+
+        IntSummaryStatistics summaryStatistics = list1.stream().collect(Collectors.summarizingInt(Data1::getId));
+        System.out.println(summaryStatistics.getMin());
     }
 
     @Test
-    public void test43() throws UnsupportedEncodingException {
+    public void test44() {
+        List<Data1> list = new ArrayList<Data1>() {{
+            add(new Data1(1, "tom", 10));
+            add(new Data1(2, "jay", 20));
+            add(new Data1(3, "sky", 30));
+            add(new Data1(4, "amu", 40));
+        }};
 
-        Object invoke = new Object();
+        Integer integer = list.stream().collect(reducing(0, Data1::getAmount, Integer::sum));
+        System.out.println(integer);
+        Integer val = list.stream().map(Data1::getAmount).reduce(Integer::sum).get();
+        System.out.println(val);
 
+        String names = list.stream().map(Data1::getName).collect(joining(","));
+        System.out.println(names);
+
+        String names1 = list.stream().collect(reducing("", Data1::getName, (s1, s2) -> s1 + "-" + s2));
+        System.out.println(names1);
+    }
+
+    @Test
+    public void test45() {
+        List<Menu> list = new ArrayList<Menu>() {{
+            add(new Menu(true, "tudousi"));
+            add(new Menu(true, "xihongshi"));
+            add(new Menu(false, "yu"));
+            add(new Menu(false, "rou"));
+        }};
+        Map<Boolean, List<Menu>> collect = list.stream().collect(partitioningBy(Menu::isVegetarian));
+        System.out.println(collect);
+
+        List<Menu> menus = list.stream().filter(Menu::isVegetarian).collect(Collectors.toList());
+        System.out.println(menus);
+
+        Map<Boolean, Long> collect1 = list.stream().collect(partitioningBy(Menu::isVegetarian, counting()));
+        System.out.println(collect1);
+    }
+
+    @Test
+    public void test46() {
+        ConverterHandel<String, User> converterHandel = (s -> {
+            User user = new User();
+            user.setName(s);
+            user.setSex("1");
+            user.setAge(16);
+            return user;
+        });
+        BaseDto dto = converterHandel.convert("tom");
+
+    }
+
+    @Test
+    public void test47() {
+        String numeric = RandomStringUtils.randomNumeric(10);
+        ThreadLocalTest.set(numeric);
+        test48();
+    }
+
+    public void test48() {
+        test49();
+
+    }
+
+    public void test49() {
+        test50();
+
+    }
+
+    public void test50() {
+
+        test51();
+    }
+
+    public void test51() {
+        System.out.println(ThreadLocalTest.get());
+    }
+
+    @Test
+    public void test52() {
+
+        String str= "";
+        StringJoiner joiner = new StringJoiner(",");
+        for (int i = 0; i < 10; i++) {
+             joiner.add(i+"");
+        }
+        System.out.println(joiner.toString());
     }
 
 
