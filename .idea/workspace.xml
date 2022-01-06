@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c7227f7-7808-4da2-9f56-ab3d7de7f45d" name="Default Changelist" comment="增加json测试">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/config/ThreadLocalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/converter/ConverterHandel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/entity/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-lambda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-lambda.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/JavaLambdaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/JavaLambdaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/ParseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/ParseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaJsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/ParseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/ParseService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,7 +371,7 @@
       <workItem from="1641344905478" duration="22000" />
       <workItem from="1641345682019" duration="719000" />
       <workItem from="1641347201077" duration="94000" />
-      <workItem from="1641347345987" duration="2182000" />
+      <workItem from="1641347345987" duration="3771000" />
     </task>
     <task id="LOCAL-00001" summary="增加json测试">
       <created>1624341669048</created>
@@ -431,7 +422,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/ParseService.java</url>
-          <line>34</line>
+          <line>33</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
