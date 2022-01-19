@@ -58,48 +58,48 @@ public class ThreadLocalTest {
         }).start();
 
 
-        new Thread(() -> {
-
-            String mainThreadName = "main_02";
-
-            tl.set(3);
-
-            executorService.execute(() -> {
-                sleep(1L);
-                System.out.println(String.format("本地变量改变之前(3), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
-            });
-
-            executorService.execute(() -> {
-                sleep(1L);
-                System.out.println(String.format("本地变量改变之前(3), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
-            });
-
-            executorService.execute(() -> {
-                sleep(1L);
-                System.out.println(String.format("本地变量改变之前(3), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
-            });
-
-            sleep(1L); //确保上面的会在tl.set执行之前执行
-            tl.set(4); // 等上面的线程池第一次启用完了，父线程再给自己赋值
-
-            executorService.execute(() -> {
-                sleep(1L);
-                System.out.println(String.format("本地变量改变之后(4), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
-            });
-
-            executorService.execute(() -> {
-                sleep(1L);
-                System.out.println(String.format("本地变量改变之后(4), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
-            });
-
-            executorService.execute(() -> {
-                sleep(1L);
-                System.out.println(String.format("本地变量改变之后(4), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
-            });
-
-            System.out.println(String.format("线程名称-%s, 变量值=%s", Thread.currentThread().getName(), tl.get()));
-
-        }).start();
+//        new Thread(() -> {
+//
+//            String mainThreadName = "main_02";
+//
+//            tl.set(3);
+//
+//            executorService.execute(() -> {
+//                sleep(1L);
+//                System.out.println(String.format("本地变量改变之前(3), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
+//            });
+//
+//            executorService.execute(() -> {
+//                sleep(1L);
+//                System.out.println(String.format("本地变量改变之前(3), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
+//            });
+//
+//            executorService.execute(() -> {
+//                sleep(1L);
+//                System.out.println(String.format("本地变量改变之前(3), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
+//            });
+//
+//            sleep(1L); //确保上面的会在tl.set执行之前执行
+//            tl.set(4); // 等上面的线程池第一次启用完了，父线程再给自己赋值
+//
+//            executorService.execute(() -> {
+//                sleep(1L);
+//                System.out.println(String.format("本地变量改变之后(4), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
+//            });
+//
+//            executorService.execute(() -> {
+//                sleep(1L);
+//                System.out.println(String.format("本地变量改变之后(4), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
+//            });
+//
+//            executorService.execute(() -> {
+//                sleep(1L);
+//                System.out.println(String.format("本地变量改变之后(4), 父线程名称-%s, 子线程名称-%s, 变量值=%s", mainThreadName, Thread.currentThread().getName(), tl.get()));
+//            });
+//
+//            System.out.println(String.format("线程名称-%s, 变量值=%s", Thread.currentThread().getName(), tl.get()));
+//
+//        }).start();
 
     }
 

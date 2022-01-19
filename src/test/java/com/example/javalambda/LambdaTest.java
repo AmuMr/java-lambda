@@ -52,32 +52,6 @@ import static java.util.stream.Collectors.reducing;
 
 public class LambdaTest {
 
-
-    private boolean flag;
-
-    private static void souts() {
-        new Thread(() -> {
-            for (int i = 0; i < 100; i++) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    System.out.println(e.getMessage());
-                }
-                System.out.println(i);
-            }
-        }).start();
-    }
-
-    public static void main(String[] args) {
-        List<Integer> list1 = new ArrayList<>();
-        for (int i = 0; i < 100000; i++) {
-            list1.add(i);
-        }
-        list1.stream().forEach(s -> {
-            System.out.println(Thread.currentThread().getName() + ">>>>" + s);
-        });
-    }
-
     @Test
     public void test() {
         Consumer<String> str = (x) -> System.out.println(x);
@@ -87,7 +61,6 @@ public class LambdaTest {
     @Test
     public void test1() {
         Supplier<Person> person = Person::new;
-
         System.out.println(person.get());
     }
 
@@ -118,11 +91,9 @@ public class LambdaTest {
             add("5");
         }};
         Map<String, String> collect = list.stream().collect(Collectors.toMap(s -> s, s -> s));
-
         System.out.println(collect);
-
         Stream<String> aa = Stream.of("aa", "bb");
-
+        System.out.println(aa);
     }
 
     @Test
@@ -846,10 +817,10 @@ public class LambdaTest {
     @Test
     public void test52() {
 
-        String str= "";
+        String str = "";
         StringJoiner joiner = new StringJoiner(",");
         for (int i = 0; i < 10; i++) {
-             joiner.add(i+"");
+            joiner.add(i + "");
         }
         System.out.println(joiner.toString());
     }

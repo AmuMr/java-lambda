@@ -6,6 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="5c7227f7-7808-4da2-9f56-ab3d7de7f45d" name="Default Changelist" comment="增加json测试">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/async/AsyncService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/async/AsyncService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/AparseSerivce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/BparseSerivce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/Callback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/CparseSerivce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/IParse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/ITest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/ParseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/config/TimeDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/controller/HelloWordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/controller/HelloWordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/entity/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/json/JsonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/json/OpenAccountRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/json/OpenAccountResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/json/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/json/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/json/TradeRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/thread/ThreadLocalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/thread/ThreadLocalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/javalambda/util/SpringContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/javalambda/util/SpringContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tomcat.jks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/javalambda/JavaLambdaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/AparseSerivce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/BparseSerivce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/Callback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/CparseSerivce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/IParse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/ITest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/callback/ParseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/javalambda/controller/HelloWordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/javalambda/controller/HelloWordController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,10 +129,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41230768" />
-    <property name="settings.editor.selected.configurable" value="diff.base" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -133,119 +165,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LambdaTest.test52">
-    <configuration name="LambdaTest.test43" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-lambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.javalambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.javalambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.javalambda.LambdaTest" />
-      <option name="METHOD_NAME" value="test43" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdaTest.test44" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-lambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.javalambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.javalambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.javalambda.LambdaTest" />
-      <option name="METHOD_NAME" value="test44" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdaTest.test45" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-lambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.javalambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.javalambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.javalambda.LambdaTest" />
-      <option name="METHOD_NAME" value="test45" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdaTest.test47" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-lambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.javalambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.javalambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.javalambda.LambdaTest" />
-      <option name="METHOD_NAME" value="test47" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdaTest.test52" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-lambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.javalambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.javalambda" />
-      <option name="MAIN_CLASS_NAME" value="com.example.javalambda.LambdaTest" />
-      <option name="METHOD_NAME" value="test52" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AgentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="agent" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.agent.AgentApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="JavaLambdaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="java-lambda" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.javalambda.JavaLambdaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.LambdaTest.test43" />
-      <item itemvalue="JUnit.LambdaTest.test44" />
-      <item itemvalue="JUnit.LambdaTest.test45" />
-      <item itemvalue="JUnit.LambdaTest.test47" />
-      <item itemvalue="JUnit.LambdaTest.test52" />
-      <item itemvalue="Spring Boot.AgentApplication" />
-      <item itemvalue="Spring Boot.JavaLambdaApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.LambdaTest.test52" />
-        <item itemvalue="JUnit.LambdaTest.test47" />
-        <item itemvalue="JUnit.LambdaTest.test45" />
-        <item itemvalue="JUnit.LambdaTest.test44" />
-        <item itemvalue="JUnit.LambdaTest.test43" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBootOptions">
@@ -371,7 +299,11 @@
       <workItem from="1641344905478" duration="22000" />
       <workItem from="1641345682019" duration="719000" />
       <workItem from="1641347201077" duration="94000" />
-      <workItem from="1641347345987" duration="3771000" />
+      <workItem from="1641347345987" duration="4059000" />
+      <workItem from="1641527049831" duration="550000" />
+      <workItem from="1642207603706" duration="4836000" />
+      <workItem from="1642213510815" duration="30000" />
+      <workItem from="1642216603974" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="增加json测试">
       <created>1624341669048</created>
@@ -393,6 +325,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加json测试" />
     <option name="LAST_COMMIT_MESSAGE" value="增加json测试" />
@@ -402,14 +345,9 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>312</line>
+          <line>283</line>
           <properties>
             <option name="lambda-ordinal" value="0" />
           </properties>
@@ -417,28 +355,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>456</line>
+          <line>427</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/callback/ParseService.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/JavaLambdaApplicationTests.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/json/JsonTest.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/json/JsonTest.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/exception/LambdaExcTest.java</url>
@@ -446,43 +364,28 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/JavaLambdaApplicationTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/json/JsonTest.java</url>
-          <line>125</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/javalambda/json/JsonTest.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>726</line>
+          <line>697</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>688</line>
+          <line>659</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>727</line>
+          <line>698</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>736</line>
+          <line>707</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/javalambda/LambdaTest.java</url>
-          <line>829</line>
+          <line>800</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
